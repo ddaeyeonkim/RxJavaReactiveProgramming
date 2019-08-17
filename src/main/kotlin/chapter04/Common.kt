@@ -11,6 +11,6 @@ fun getThreadName(): String = Thread.currentThread().name
 
 fun <T> printDataWithThreadNameAndTime(t: T) = println("${getThreadName()} || ${getCurrentTime()} -> $t")
 
-fun printError(t: Throwable?) = println("에러 : $t")
+fun printError(t: Throwable?) = println("${getThreadName()} || ${getCurrentTime()} -> 에러 : $t")
 
-fun printComplete() = println("완료")
+fun printComplete() = println("${getThreadName()} || ${getCurrentTime()} -> 완료")
